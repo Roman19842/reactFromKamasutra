@@ -1,15 +1,15 @@
 import React from 'react';
+import MyPostsContainer from './MyPosts/MyPostContainer';
 import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
+const Profile = (props) => {
 
-const Profile = () => {
+     
     return(
       <div>
-        <div><img className={s.mainimage} src='https://www.atorus.ru/public/ator/data/image/News/46470/san-sebastian-2541598_960_720.jpg'/></div>
-        <div>
-        <MyPosts />
-        </div >
-        
+        <ProfileInfo />
+        <MyPostsContainer store = {props.store} />
       </div>
     );
 }
